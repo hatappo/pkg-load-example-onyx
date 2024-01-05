@@ -1,0 +1,7 @@
+# Mac
+.DS_Store
+
+# Onyx
+/lib
+/bin
+*.wasm

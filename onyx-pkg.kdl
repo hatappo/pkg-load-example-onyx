@@ -1,0 +1,17 @@
+package {
+    name "" 
+    author "" 
+    url "" 
+    description "An example project to load 3rd party onyx libs" 
+    version "0.0.0" 
+}
+
+config {
+    dependency_source_path "./lib" 
+    dependency_binary_path "./bin" 
+}
+
+dependencies {
+    http-server "0.2.27" git="http://github.com/onyx-lang/pkg-http-server" 
+}
+

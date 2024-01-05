@@ -1,0 +1,24 @@
+#load_all "lib"
+
+use example.onyx.hello {hello}
+use http
+use http.server {
+    Req :: Request,
+    Res :: Response,
+    route
+}
+
+#tag route.{ .GET, "/" }
+index :: (req: &Req, res: &Res) {
+    hello();
+    res->html("HTTP Server in Onyx!");
+    res->status(200);
+    res->end();
+}
+
+main :: () {
+    router := http.server.router();
+    router->collect_routes();
+    app := http.server.tcp(&router);
+    app->serve(8000);
+}
