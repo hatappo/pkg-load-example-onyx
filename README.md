@@ -7,5 +7,7 @@ git clone https://github.com/hatappo/pkg-load-example-onyx.git && cd ./pkg-load-
 onyx sync
 
 # execute onyx program, using 3rd party packages
-onyx run src/main.onyx`, then invoked web server on http://localhost:8000/
+onyx run src/main.onyx
 ```
+
+Then invoked web server on http://localhost:8000/
